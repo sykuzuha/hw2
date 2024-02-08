@@ -5,6 +5,7 @@
 #include "clothing.h"
 #include "movie.h"
 #include "util.h"
+#include "mydatastore.h"
 using namespace std;
 
 
@@ -82,6 +83,7 @@ void ProductParser::parseCommonProduct(std::istream& is,
 
 ProductBookParser::ProductBookParser() : ProductParser()
 {
+
 }
 
 Product* ProductBookParser::parseSpecificProduct(std::string category,
@@ -130,13 +132,15 @@ std::string ProductBookParser::categoryID()
  */
 Product* ProductBookParser::makeProduct()
 {
-
-
+    Book* newBook= new Book(categoryID(),prodName_, price_, qty_, author_, isbn_);
+    return newBook;
+    
 }
 
 
 ProductClothingParser::ProductClothingParser()
 {
+    
 }
 
 Product* ProductClothingParser::parseSpecificProduct(std::string category,
@@ -185,9 +189,8 @@ std::string ProductClothingParser::categoryID()
  */
 Product* ProductClothingParser::makeProduct()
 {
-
-
-
+    Clothing* newClothing = new Clothing(categoryID(),prodName_, price_, qty_, size_, brand_);
+    return newClothing;
 }
 
 
@@ -245,6 +248,7 @@ std::string ProductMovieParser::categoryID()
  */
 Product* ProductMovieParser::makeProduct()
 {
-
-
+    Movie* newMovie = new Movie(categoryID(),prodName_, price_, qty_, genre_, rating_);
+    return newMovie;
 }
+
