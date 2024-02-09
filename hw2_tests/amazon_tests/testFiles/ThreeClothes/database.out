@@ -1,5 +1,11 @@
 <products>
 clothing
+FRC Fan T-Shirt
+17.00
+3
+7
+FIRST
+clothing
 Men's Fitted Shirt
 39.99
 25
@@ -11,13 +17,7 @@ Women's Blouse
 8
 Small
 JCPenny
-clothing
-FRC Fan T-Shirt
-17
-3
-7
-FIRST
 </products>
 <users>
-user 10000 0
+user 10000.00 0
 </users>

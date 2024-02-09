@@ -12,5 +12,4 @@ Menu:
 
 Enter command: 
 Invalid username
-
 Enter command: 

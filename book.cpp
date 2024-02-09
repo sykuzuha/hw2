@@ -2,6 +2,8 @@
 #include <set>
 #include <vector>
 #include <iostream>
+#include <iomanip>
+#include <sstream>
 #include "book.h"
 
 
@@ -19,7 +21,7 @@ std::set<std::string> Book::keywords() const
     std::set<std::string> nameKeywords;
     std::set<std::string> authorKeywords;
     nameKeywords = parseStringToWords(name_);
-    nameKeywords = parseStringToWords(author_);
+    authorKeywords = parseStringToWords(author_);
     keywords = setUnion(nameKeywords,authorKeywords);
     keywords.insert(ISBN_);
     return keywords;
@@ -28,7 +30,11 @@ std::set<std::string> Book::keywords() const
 
 std::string Book::displayString() const
 {
-    return "Name: " + name_  + "\n" +
+    std::stringstream ss;
+    std::string stringPrice;
+    ss << std::setprecision(2) << std::fixed << price_;
+    ss >> stringPrice;
+    return name_  + "\n" +
     "Author: " + author_ + " " +
     + "ISBN: " + ISBN_ + "\n" +
     std::to_string(price_) + " " + std::to_string(qty_) + " left.\n";
@@ -40,5 +46,5 @@ std::string Book::displayString() const
 
 void Book::dump(std::ostream& os) const
 {
-    os << category_ << "\n" << name_ << "\n" << price_ << "\n" << qty_ << "\n" << ISBN_ << "\n" << author_ << std::endl;
+    os << category_ << "\n" << name_ << "\n" << std::setprecision(2) << std::fixed << price_ << "\n" << qty_ << "\n" << ISBN_ << "\n" << author_ << std::endl;
 }

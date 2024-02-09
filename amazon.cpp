@@ -108,7 +108,7 @@ int main(int argc, char* argv[])
                 ss >> name;
                 int index;
                 ss >> index;
-                ds.addToCart(name, hits[index]);
+                ds.addToCart(name, hits[index-1]);
 
             }
             else if(cmd == "VIEWCART")
@@ -120,6 +120,9 @@ int main(int argc, char* argv[])
             }
             else if(cmd == "BUYCART")
             {
+              string name;
+              ss >> name;
+              ds.buyCart(name);
 
             }
             

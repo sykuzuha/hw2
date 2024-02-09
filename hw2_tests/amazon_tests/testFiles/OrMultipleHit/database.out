@@ -7,25 +7,25 @@ Data Abstraction & Problem Solving with C++
 Carrano and Henry
 book
 Great Men and Women of Troy
-19.5
+19.50
 5
 978-000000000-1
 Tommy Trojan
-clothing
-Men's Fitted Shirt
-39.99
-25
-Medium
-J. Crew
 movie
 Hidden Figures DVD
 17.99
 5
 Drama
 PG
+clothing
+Men's Fitted Shirt
+39.99
+25
+Medium
+J. Crew
 </products>
 <users>
-rafsilva 100 0
-redekopp 50 1
-saty 120 1
+rafsilva 100.00 0
+redekopp 50.00 1
+saty 120.00 1
 </users>

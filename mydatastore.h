@@ -12,6 +12,8 @@ class MyDataStore : public DataStore{
     public:
         MyDataStore();
         
+        ~MyDataStore();
+        
         void addProduct(Product* p);
 
         void addUser(User* u);
@@ -29,7 +31,6 @@ class MyDataStore : public DataStore{
 
     private:
         std::map<std::string, std::set<Product*>> keyProducts;
-
         std::map<std::string, User*> users;
         std::map<std::string, Product*> products;
         std::map<User*, std::vector<Product*>> carts;

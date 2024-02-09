@@ -21,6 +21,7 @@ std::set<std::string> parseStringToWords(string rawWords)
     std::set<std::string> newSet;
     string s; 
     trim(rawWords);
+    rawWords = convToLower(rawWords);
     while (rawWords[i] != '\0') {
         if ((!ispunct(rawWords[i])) && (rawWords[i] != ' ')) 
         {

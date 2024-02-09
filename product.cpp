@@ -1,5 +1,9 @@
-#include <sstream>
+#include <string>
+#include <set>
+#include <vector>
+#include <iostream>
 #include <iomanip>
+#include <sstream>
 #include "product.h"
 
 using namespace std;
@@ -50,7 +54,8 @@ bool Product::isMatch(std::vector<std::string>& searchTerms) const
 
 void Product::dump(std::ostream& os) const
 {
-    os << category_ << "\n" << name_ << "\n" << price_ << "\n" << qty_ << endl;
+    os << category_ << "\n" << name_ << "\n" << std::setprecision(2) << std::fixed << price_ << "\n" << qty_ << endl;
 }
+
 
 
